@@ -5,8 +5,7 @@ The wiring below matches the configuration used in the `Temperature_Logger.ino` 
 
 ### 📷 Circuit Diagram
 
-![ESP8266 NodeMCU DHT11 Wiring](https://github.com/OmShirse/Arduino_Temperature_Logger/blob/b3037b5675e8a952852d7d0306a3d8daba04fdda/Arduino_Temperature_Logger%20Diagram.png)
-
+![Wiring Diagram](Temperature_Logger%20Diagram.png)
 ---
 
 ## 🧰 Components Required
