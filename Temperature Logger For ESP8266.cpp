@@ -11,8 +11,8 @@ const long READ_INTERVAL_MS = 2000;
 unsigned long lastReadTime = 0;
 
 
-#define GPIO_OUT_W1TS 0x60000304  // Set GPIO HIGH
-#define GPIO_OUT_W1TC 0x60000308  // Set GPIO LOW
+#define GPIO_OUT_W1TS 0x60000304  
+#define GPIO_OUT_W1TC 0x60000308  
 #define GPIO_ENABLE_W1TS 0x60000310
 
 #define LED_GPIO 2  // Built-in LED on many NodeMCU boards
@@ -22,10 +22,12 @@ unsigned long lastReadTime = 0;
 
 
 void led_on() {
+  // Active-LOW: driving GPIO LOW turns the LED ON
   REG_WRITE(GPIO_OUT_W1TC, (1 << LED_GPIO)); 
 }
 
 void led_off() {
+  // Active-LOW: driving GPIO HIGH turns the LED OFF
   REG_WRITE(GPIO_OUT_W1TS, (1 << LED_GPIO)); 
 }
 
